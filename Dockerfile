@@ -4,4 +4,4 @@ WORKDIR /
 
 COPY . .
 
-CMD ["python","bowling.py"]
+CMD ["python","main.py"]

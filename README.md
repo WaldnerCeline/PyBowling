@@ -10,5 +10,8 @@ docker run -it mon-bowling
 ## Utilisation via Shell
 
 ```shell
-python bowling.py
+python main.py
 ```
+
+## Tests
+

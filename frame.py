@@ -1,6 +1,3 @@
-from typing import List, Optional
-
-
 class Frame:
     def __init__(self, frame_index: int):
         self.frame_index = frame_index
@@ -10,6 +7,7 @@ class Frame:
         self.isStrike = False
         self.isSpare = False
 
+
     def readLance1(self):
         valeur1 = int(input("Lancé 1 : "))
         while valeur1 < 0 or valeur1 > 10:
@@ -17,6 +15,7 @@ class Frame:
             valeur1 = int(input("Lancé 1 : "))
         self.lancer1 = valeur1
         return valeur1
+
 
     def readLance2(self):
         valeur2 = int(input("Lancé 2 : "))
@@ -26,7 +25,8 @@ class Frame:
 
         self.lancer2 = valeur2
         return valeur2
-    
+
+
     def roll(self, only_one_lancer: bool = False):
         valeur1 = self.readLance1()
         if valeur1 == 10:
@@ -45,9 +45,8 @@ class Frame:
             self.isSpare = True
 
         self.calculate_score()
-        #print("Frame " + str(self.frame_index) + " | Lancer 1 : " + str(self.lancer1) + " | Lancer 2 : " + str(self.lancer2))
-        
-        
+
+
     def calculate_score(self):
         self.score = self.lancer1 + self.lancer2
 
