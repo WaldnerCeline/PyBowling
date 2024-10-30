@@ -50,8 +50,8 @@ class Bowling:
 
 
     def addFrameBonus(self):
-        print("LANCE BONUS !")
         if self.frames[self.nb_tour - 1].isStrike:
+            print("LANCE BONUS !")
             frame_bonus = Frame(self.nb_tour)
             frame_bonus.roll()
             self.frames.append(frame_bonus)
@@ -65,6 +65,7 @@ class Bowling:
                 self.score_tour[self.nb_tour - 1] += frame_bonus.lancer1 + frame_bonus.lancer2
 
         elif self.frames[self.nb_tour - 1].isSpare:
+            print("LANCE BONUS !")
             frame_bonus = Frame(self.nb_tour)
             frame_bonus.roll(only_one_lancer=True)
             self.frames.append(frame_bonus)
